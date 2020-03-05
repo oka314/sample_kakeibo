@@ -1,22 +1,22 @@
 class CostController < ApplicationController
   def index
-    @costs = Costs.order(created_at: :asc)
+    @costs = Cost.order(created_at: :asc)
   end
 
   def show
-    @costs = Costs.find(params[:id])
+    @costs = Cost.find(params[:id])
   end
 
   def new
-    @costs = Costs.new()
+    @costs = Cost.new()
   end
 
   def edit
-    @costs = Costs.find(params[:id])
+    @costs = Cost.find(params[:id])
   end
 
   def create
-    @costs = Costs.new(params[:costs])
+    @costs = Cost.new(params[:costs])
     if @costs.save
       redirect_to @costs, notice: "つかったお金をとうろくしたよ"
     else
@@ -25,7 +25,7 @@ class CostController < ApplicationController
   end
 
   def update
-    @costs = Costs.find(params[:id])
+    @costs = Cost.find(params[:id])
     @costs.assign_attributes(params[:costs])
     if @costs.save
       redirect_to @costs, notice: "つかったお金をとうろくしたよ"
