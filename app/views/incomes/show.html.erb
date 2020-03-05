@@ -1,0 +1,16 @@
+<h2>おしごとのしょうさいだよ</h2>
+<%= link_to "へんしゅう", [:edit, @income]%>
+<%= link_to "おしごといちらんにもどる", :incomes%>
+
+<table>
+  <tr>
+  <th>なまえ</th>
+  <td><%= @income.name %></td>
+  </tr>
+
+  <tr>
+    <th>せつめい</th>
+    <td><%= @income.description%></td>
+  </tr>
+</table>
+

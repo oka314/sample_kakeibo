@@ -10,9 +10,15 @@
     </tr>
   </thead>
   <tbody>
-    <% @incomes.each do |incomes|%>
+    <% @incomes.each do |income|%>
       <tr>
         <td><%= income.name %></td>
         <td><%= income.description%></td>
       </tr>
     <% end %>
+  </tbody>
+</table>
+
+<% else%>
+  <p>おしごまだきまってないよ！</p>
+<% end %>

@@ -1,0 +1,5 @@
+<h2>おしごとのなまえをかえるところだよ！</h2>
+<%= form_with(model: @income, local: true )do |form| %>
+	<%= render "form", form: form %>
+	<%= form.submit %>
+<% end %> 
