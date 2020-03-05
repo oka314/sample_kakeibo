@@ -16,7 +16,7 @@ class CostController < ApplicationController
   end
 
   def create
-    @costs = Cost.new(params[:costs])
+    @costs = Cost.new(params[:cost])
     if @costs.save
       redirect_to @costs, notice: "つかったお金をとうろくしたよ"
     else
