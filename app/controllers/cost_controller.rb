@@ -1,18 +1,18 @@
 class CostController < ApplicationController
   def index
-    @costs = Cost.order(created_at: :asc)
+    @costs = Costs.order(created_at: :asc)
   end
 
   def show
-    @costs = Cost.find(params[:id])
+    @costs = Costs.find(params[:id])
   end
 
   def new
-    @costs = Cost.new()
+    @costs = Costs.new()
   end
 
   def edit
-    @costs = Cost.find(params[:id])
+    @costs = Costs.find(params[:id])
   end
 
   def create
@@ -21,6 +21,7 @@ class CostController < ApplicationController
       redirect_to @costs, notice: "つかったお金をとうろくしたよ"
     else
       render "new"
+    end
   end
 
   def update
@@ -30,6 +31,7 @@ class CostController < ApplicationController
       redirect_to @costs, notice: "つかったお金をとうろくしたよ"
     else
       render "new"
+    end
   end
 
 
