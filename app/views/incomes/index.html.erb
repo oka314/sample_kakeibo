@@ -1,0 +1,18 @@
+<% @page_title = "おてつだいいちらん"%>
+<h2><%= @page_title %></h2>
+
+<% if @incomes.present?%>
+<table>
+  <thead>
+    <tr>
+      <th>おしごと</th>
+      <th>がんばったこと</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @incomes.each do |incomes|%>
+      <tr>
+        <td><%= income.name %></td>
+        <td><%= income.description%></td>
+      </tr>
+    <% end %>
