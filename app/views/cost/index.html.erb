@@ -1,0 +1,32 @@
+<% @page_title = "つかったおかねいちらん" %>
+<h2><%= @page_title %></h2>
+
+<%= link_to "つかったおかねのとうろく", :new_costs %>
+
+<% if @costs.present? %>
+<table>
+	<thead>
+		<tr>
+			<th>つかったもの</th>
+			<th>つかったおかね</th>
+			<th>そうさ</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @costs.each do |cost| %>
+			<tr>
+				<td><%= cost.name %></td>
+				<td><%= cost.description %></td>
+				<td>
+				<%= link_to "ここからへんしゅうできるよ", [:edit, cost] %>
+				<%= link_to "ここからけせるよ", cost, method: :delete,
+          data: { confirm: "ほんとうにけしていい？"} %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<% else %>
+	<p></p>
+<% end %>
