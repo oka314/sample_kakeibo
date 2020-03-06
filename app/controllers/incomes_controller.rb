@@ -1,6 +1,6 @@
 class IncomesController < ApplicationController
   def index
-    @incomes = Income.order(created_at: :asc)
+    @income = Income.order(created_at: :asc)
   end
 
   def show

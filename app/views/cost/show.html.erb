@@ -1,6 +1,6 @@
 <h2>つかったおかねのしょうさい</h2>
 <%= link_to "へんしゅうできるよ", [:edit, @costs] %>
-<%= link_to "つかったおかねいちらんにもどるよ", :costs %>
+<%= link_to "つかったおかねいちらんにもどるよ", :cost_index %>
  
 <table>
  
@@ -10,7 +10,7 @@
   </tr>
  
 	<tr>
-		<th>つかった（かった）もの</th>
+		<th>つかったもの</th>
 		<td><%= @costs.description %></td>
 	</tr>
 </table>

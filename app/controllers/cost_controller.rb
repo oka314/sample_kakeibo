@@ -26,7 +26,7 @@ class CostController < ApplicationController
 
   def update
     @costs = Cost.find(params[:id])
-    @costs.assign_attributes(params[:costs])
+    @costs.assign_attributes(params[:cost])
     if @costs.save
       redirect_to @costs, notice: "つかったお金をとうろくしたよ"
     else
@@ -34,11 +34,10 @@ class CostController < ApplicationController
     end
   end
 
-
   def destroy
-    @costs = Costs.find(params[:id])
+    @costs = Cost.find(params[:id])
     @costs.destroy
-    redirect_to :costs, notice: "とうろくをけしたよ"
+    redirect_to :cost, notice: "とうろくをけしたよ"
   end
 
 end

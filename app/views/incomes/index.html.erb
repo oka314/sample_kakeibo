@@ -19,7 +19,7 @@
         <td>
           <%= link_to "ここからへんしゅうできるよ", [:edit, income]%>
           <%= link_to "ここからおしごとをけせるよ", income, method: :delete,
-              date: { confirm: "ほんとうにけしていい？"} %>
+              data: { confirm: "ほんとうにけしていい？"} %>
         </td>
       </tr>
     <% end %>

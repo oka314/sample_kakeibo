@@ -1,5 +1,5 @@
 <h2>つかったおかねをとうろくするよ<h2>
-<%= form_for @costs, url: cost_path  do |form| %>
+<%= form_for @costs, url: cost_index_path  do |form| %>
   <%= render "form", form: form %>
   <div><%= form.submit %></div>
 <% end %>
